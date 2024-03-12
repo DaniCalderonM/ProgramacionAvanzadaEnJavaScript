@@ -99,11 +99,11 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
     const imagen = document.createElement("img");
 
     //Intentamos cargar la imagen en JPG
-    imagen.src = `../assets/img/${nombreAnimal}.jpg`;
+    imagen.src = `/assets/img/${nombreAnimal}.jpg`;
     //Con el evento onerror, logramos que si no encuentra la extension jpg, cargue 
     //el png
     imagen.onerror = function () {
-        imagen.src = `../assets/img/${nombreAnimal}.png`;
+        imagen.src = `/assets/img/${nombreAnimal}.png`;
     };
     //Agregamos el alt a la imagen
     imagen.alt = nombreAnimal;
