@@ -99,11 +99,11 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
     const imagen = document.createElement("img");
 
     //Intentamos cargar la imagen en JPG
-    imagen.src = `/assets/img/${nombreAnimal}.jpg`;
+    imagen.src = `assets/img/${nombreAnimal}.jpg`;
     //Con el evento onerror, logramos que si no encuentra la extension jpg, cargue 
     //el png
     imagen.onerror = function () {
-        imagen.src = `/assets/img/${nombreAnimal}.png`;
+        imagen.src = `assets/img/${nombreAnimal}.png`;
     };
     //Agregamos el alt a la imagen
     imagen.alt = nombreAnimal;
@@ -176,7 +176,7 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
                     //Si esto se cumple, entonces añadimos la imagen correspondiente al animal
                     //y quitamos el padding-5 para que se visualice correctamente nuestra imagen en el div con id "preview"
                     if (animalEncontrado) {
-                        contenedorPreview.innerHTML = `<img src="/assets/img/${animalEncontrado.imagen}" alt="${animalEncontrado.name}" class="img-fluid config-img">`;
+                        contenedorPreview.innerHTML = `<img src="assets/img/${animalEncontrado.imagen}" alt="${animalEncontrado.name}" class="img-fluid config-img">`;
                         contenedorPreview.parentElement.classList.remove("p-5");
                         //De no encontrar la igualdad del nombre, dejamos vacio el contenedor.
                     } else {
